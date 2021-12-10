@@ -1,0 +1,930 @@
+@charset "utf-8";
+
+/*
+ * @date	: 25/01/2013
+ * @package	: generic.css
+ * @developer	: Ferdi Tarakcı
+ * @web		: www.webtasarimx.net
+ * @contact	: info@webtasarimx.net
+*/
+
+/*
+======================================================
+	Yazı Fontları
+======================================================
+*/
+@font-face {
+	font-family:'Neou Thin';
+    src: url('../fonts/neou/neou-thin.eot');
+    src: url('../fonts/neou/neou-thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/neou/neou-thin.woff') format('woff'),
+         url('../fonts/neou/neou-thin.ttf') format('truetype'),
+         url('../fonts/neou/neou-thin.svg#neou_thinthin') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'Kuro Regular';
+    src: url('../fonts/kuro/kuro-regular.eot');
+    src: url('../fonts/kuro/kuro-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kuro/kuro-regular.woff') format('woff'),
+         url('../fonts/kuro/kuro-regular.ttf') format('truetype'),
+         url('../fonts/kuro/kuro-regular.svg#kuroregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family: 'Rockwell';
+	src: url('../fonts/rockwell/rockwell.eot');
+	src: local('O'),
+	url('../fonts/rockwell/rockwell.woff') format('woff'),
+	url('../fonts/rockwell/rockwell.ttf') format('truetype'),
+	url('../fonts/rockwell/rockwell.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Rockwell Extra Bold';
+	src: url('../fonts/rockwell/RockwellExtraBold.eot');
+	src: local('O'),
+	url('../fonts/rockwell/RockwellExtraBold.woff') format('woff'),
+	url('../fonts/rockwell/RockwellExtraBold.ttf') format('truetype'),
+	url('../fonts/rockwell/RockwellExtraBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+/*
+======================================================
+	Genel Stil
+======================================================
+*/
+* {margin:0; padding:0; border:0; outline:none; -moz-outline:none; -moz-user-focus:none;}
+html, body {overflow:hidden; width:100%; height:100%;}
+body {line-height:1.6em; font-family:Arial, Verdana; font-size:13px; font-style:normal; font-weight:normal; font-variant:normal;}
+ul, ol {margin:0; padding-left:30px;}
+a {}
+h1, h2, h3, h4, h5, h6 {font-weight:normal !important; font-style:normal !important; text-transform:uppercase;}
+
+
+
+
+/*
+======================================================
+	Yükleniyor Stil
+======================================================
+*/
+#qLpercentage {display:block; position:absolute; top:50%; left:50%; width:180px; height:50px; margin:-90px 0 0 -90px;padding-top:130px;font-style:italic; text-align:center; font-size:18px; font-weight:bold; font-style:italic; background:#fff /*url(../img/loader.gif) center top no-repeat*/;}
+#qLpercentage .percent {display:inline-block; padding:0px 3px; font-size:10px; vertical-align:4px;}
+
+
+
+
+/*
+======================================================
+	Üst Navigasyon Stil
+======================================================
+*/
+#navigation {position:absolute; top:0px; left:0px; z-index:30; width:90%; height:auto; margin:0 5%; padding:10px 0 10px 0; text-align:center; visibility:hidden;}
+#navigation.hide {border-bottom:0px;}
+#navigation h1 {overflow:hidden; width:239px; height:65px; text-indent:-9999px; margin:0 auto 10px; background:url(../img/logo.png) no-repeat 0 -198px;}
+#navigation h1.business {background-position:0 -271px;}
+#navigation h1 a {overflow:hidden; display:block; width:100%; height:100%; text-indent:-9999px; text-decoration:none;}
+#navigation .nav-wrapper {border-bottom:1px solid #000;}
+#navigation ul {width:750px; display:inline-block; margin:5px 0 -5px; padding:10px 0px 0; border-top:1px solid #000; text-align: center; list-style:none;}
+#navigation ul li {position:relative; display:inline-block; padding-right:49px;}
+#navigation ul li:last-child {padding-right:0px;}
+#navigation ul li a {display:block; padding-bottom:6px; font-family:'Kuro Regular'; font-size:12px; font-size-adjust:.5; color:#000; border-bottom:1px solid transparent; text-transform:uppercase; text-decoration:none;}
+#navigation ul li a:hover {border-bottom:1px solid #000;}
+#navigation ul li a.active {padding-bottom:5px; border-bottom:2px solid #000;}
+.lte7 #navigation ul li {display:inline; zoom:1;}
+
+
+
+
+
+
+
+/*
+======================================================
+	Tabs Navigasyon Stil
+======================================================
+*/
+.tabs {/*\*/}
+.tabs ul.tabs-nav {display:block; width:100%; margin:15px 0 30px; padding:0 0px 0; text-align:left;}
+.tabs ul.tabs-nav li {position:relative; display:inline-block; padding:0px 35px 0px 0px;}
+.tabs ul.tabs-nav li:last-child {background:transparent; padding:0px 0px 0px 0px;}
+.tabs ul.tabs-nav li a {display:block; margin-bottom:0px; line-height:21px; font-family:'Rockwell'; font-size:20px; font-weight: normal !important; color:#e09287; text-transform:uppercase; text-transform:uppercase; text-decoration:none;}
+#business .tabs ul.tabs-nav li a {color:#AF584B;}
+.tabs ul.tabs-nav li.ui-state-hover a:hover {color:#EC008C !important;} 
+.tabs ul.tabs-nav li.ui-state-active a,
+.tabs ul.tabs-nav li.ui-state-active.ui-state-hover a {color:#EC008C !important;}
+
+
+/*
+======================================================
+	Sub Tabs Navigasyon Stil
+======================================================
+*/
+.sub-tabs {/*\*/}
+.sub-tabs ul.sub-tabs-nav {display:block; width:100%; margin:15px 0 20px; padding:0; text-align:left;}
+.sub-tabs ul.sub-tabs-nav li {position:relative; display:inline-block; padding:0px 40px 0px 0px;}
+.sub-tabs ul.sub-tabs-nav li:last-child {background:transparent; padding: 0px 0px 0px 0px;}
+.sub-tabs ul.sub-tabs-nav li a {margin-bottom:0px; line-height:21px; font-family:'Rockwell'; font-size:20px; font-weight: normal !important; color:#919b24; text-transform:uppercase; text-decoration:none;}
+#business .sub-tabs ul.sub-tabs-nav li a {color:#24759B;}
+.sub-tabs ul.sub-tabs-nav li.ui-state-hover a:hover {color:#231F20 !important;}
+.sub-tabs ul.sub-tabs-nav li.ui-state-active a,
+.sub-tabs ul.sub-tabs-nav li.ui-state-active.ui-state-hover a {color:#231F20 !important;}
+
+
+
+
+
+
+
+/*
+======================================================
+	Wrapper Stil
+======================================================
+*/
+#wrapper {overflow:hidden; visibility:hidden; width:100%; height:100%; background-color:#fff;}
+.cache {position:absolute; top:0px; left:0px; z-index:100; width:100%; height:100%; background:transparent;}
+.hidden {visibility: hidden;}
+
+
+
+
+/*
+======================================================
+	Eğik Kenar Stil
+======================================================
+*/
+.bord {width:100px; height:100%; position:absolute; top:0px; left:0px;}
+.bord > * {shape-rendering: geometricPrecision;}
+#bordHealthcare {left:auto; right:1px;}
+#bordBusiness {left:1px; right:auto;}
+
+
+
+
+/*
+======================================================
+	Rub Stil
+======================================================
+*/
+.rub {
+	position: absolute;
+	top:0px; left:0px;
+	width:100%;
+	height:100%;
+	background: transparent;
+	z-index:2;   
+	overflow: hidden;
+}  
+.rub .background {      
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:100%;
+	width:100%; 
+}
+#business .background {
+	left:auto;
+	right:0px;    
+	background-color:#0bb7eb;
+}
+#healthcare .background {
+	left:0px;
+	right:auto;
+	background-color:#ccdc29;
+}
+.rub.active {
+	z-index:2;
+}
+.rub.unactive {
+	z-index:1;     
+	cursor: pointer;  
+}
+
+
+
+
+
+
+
+
+/*
+======================================================
+	Tiny Scroll Stil
+======================================================
+*/
+.scrollbar {position:absolute; top:10px; width:10px;}
+#healthcare .scrollbar {left:10px;}
+#business .scrollbar {right:10px;}
+.scrollbar .track {position: relative;width: 10px; height: 100%; padding:0; background-color:transparent;}
+.scrollbar .track .thumb {overflow:hidden; position:absolute; top:0; left:0; width:10px; height:20px; cursor:pointer; /*border-radius: 20px;*/}
+#healthcare .scrollbar .track .thumb {right:auto; left:0;}
+#business .scrollbar .track .thumb {right:0; left:auto;}
+.scrollbar .track .thumb,
+.scrollbar .track .thumb .end {/*opacity:0.2;*/ background-color:#000;}
+.disable,
+.scrollbar .track .thumb .end,
+.unactive .scrollbar {display:none;}
+.scrollbar,
+.scrollbar .track,
+.scrollbar .track .thumb {width: 10px;}
+.viewport {overflow:hidden; position:relative; top:0px; left:0px; width:100%; height:100%;}
+.viewport .overview {position:relative;}
+
+
+
+/*
+======================================================
+	Healthcare Stil
+======================================================
+*/
+#healthcare {width:50%;}
+
+
+/*
+======================================================
+	Business Stil
+======================================================
+*/
+#business {width:50%; left:50%;}
+
+
+/*
+======================================================
+	Inner Stil
+======================================================
+*/
+
+#wrapper .container {overflow:hidden; display:none; position:absolute; top:0px; left:0px; right:0px; bottom:0px; width:auto; height:100%; font-size:11px;} 
+.inner {overflow:hidden; position:absolute; top:50%; left:50%; width:750px; height:600px; line-height:17px; margin:-250px 0 0 -375px; font-size:12px;}
+/*
+.unactive .inner {background-color:#fff;}
+#healthcare.active .inner {background-color:#ccdc29;}
+#business.active .inner {background-color:#0bb7eb;}
+*/
+.inner .wrapper {width:100%;}
+.inner h2,
+.inner h3,
+.inner .title {margin-bottom:20px; line-height:21px; font-family:'Rockwell'; font-size:20px; color:#EC008C;}
+.inner h3 {font-size:17px; margin-bottom:17px; line-height:18px;}
+.inner p {margin-bottom:5px; font-family:'Kuro Regular'; font-size:16px; /*text-align:justify;*/}
+.inner p a {color:#000; text-decoration:underline;}
+.inner p a:hover {text-decoration:none;}
+/*
+.inner hr {content:"."; display:block; height:0; clear:both; visibility:hidden; overflow:hidden;}
+.inner .tiers {width:180px; margin-right:20px; float:left;}
+.inner .tiers img {margin-bottom:10px;}
+*/
+
+.inner .w220 {float:left; width:220px; margin-left:30px; margin-bottom:30px;}
+.inner .wHalf {width:220px;}
+
+.home-page .inner h3 {text-transform:capitalize; margin-top:20px;}
+
+/*
+======================================================
+	Home Page Stil
+======================================================
+*/
+
+.home {cursor:pointer;}
+.home .inner {width:400px; margin-left:-200px;}
+.home .inner h1 {display:block; width:323px; height:96px; text-indent:-999em; background:url(../img/logo.png) no-repeat;}
+.home .inner h1.business-logo {width:323px; height:96px; background-position:0 -96px;}
+/*
+.home .inner h1,
+.home .inner h2 {margin-bottom:15px; font-family:'Rockwell'; font-size:43px; line-height:36px; text-transform:uppercase;}
+
+.home .inner h1 span,
+.home .inner h2 span {display: block; font-family:'Neou Thin'; font-size: 28px;}
+*/
+
+
+
+
+
+
+
+
+
+/*
+.products-and-services img {
+	margin-top:10px;
+	width:60px;
+	float:left;
+	clear:left;
+}
+.products-and-services .centeredtxt,
+.about-us .centeredtxt { 
+	margin: 10px 0 0 20px;
+	width:500px;
+	height: auto;
+	float: left;    
+	vertical-align: middle;
+}  
+.about-us .centeredtxt { 
+	height:180px;
+	line-height:180px;
+	margin:0px;
+	width:390px;
+}    
+.centeredtxt .wrapper { 
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 17px;
+	margin-bottom: 0;
+}  
+.centeredtxt .wrapper * { 
+	line-height: 17px;
+}
+*/
+
+
+/*
+======================================================
+	Our Team
+======================================================
+*/
+
+
+.inner-row  {width:650px; margin:0 0 20px; padding:0;}
+.projects .inner-row  {margin-bottom:20px;}
+.img-round {position:relative; width:156px; height:156px; float:left; margin:0; padding:0; background: transparent url(../img/round-bg.png) no-repeat;}
+.inner-row.active .img-round .bg {position:absolute; right:0; top:0; z-index:0; width:78px; height:156px; margin:0; padding:0; background: transparent url(../img/img-round-text-bg.png);}
+.inner-row .img-round img {position:absolute; right:8px; top:8px; z-index:1; width:140px; height:140px;}
+.inner-row .img-round-text {width:464px; min-height:126px; float:left; margin:0; padding:15px;}
+.projectss .inner-row .img-round-text {width:450px;}
+/*
+.inner-row .img-round-text h3,
+.inner-row .img-round-text h4,
+.inner-row .img-round-text h5 {margin-bottom:5px; font-weight:normal !important; font-style:normal !important; text-transform: capitalize;}
+*/
+.inner-row .img-round-text h3 {text-transform:capitalize; margin-top:10px; margin-bottom:15px; line-height:16px; font-family:'Rockwell Extra Bold'; font-size:16px; color:#000;}
+.inner-row .img-round-text h4 {text-transform:capitalize; margin-top:5px; margin-bottom:5px; line-height:17px; font-family:'Rockwell'; font-size:17px; color:#EC008C;}
+/*
+.inner-row .img-round-text h5 {line-height:15px; font-family:'Rockwell'; font-size:14px; color:#EC008C;}
+*/
+.inner-row.active .img-round-text {background: url(../img/img-round-text-bg.png); /*-webkit-border-radius:0px 10px 10px 0px; -moz-border-radius:0px 10px 10px 0px; border-radius:0px 10px 10px 0px;*/}
+.inner-row .img-round-text p {font-size:14px; line-height: 16px !important;}
+.projectss .inner-row .img-round-text p {line-height:14px !important; font-size:13px;}
+.inner-row .img-round-text a.readmore {font-size:13px; color:#EC008C; text-decoration:none;}
+.inner-row .img-round-text a.readmore:hover {text-decoration:underline;}
+.inner-row .img-round-text .hide {display:none;}
+/*
+.inner-row.active .img-round-text .hide {display:block;}
+
+.inner-row.active .img-round-text a.readmore {display:none;}
+*/
+
+
+
+
+
+
+
+
+
+/*
+.img-round-text .wrapper {
+	width:155px;
+	float:left;
+	margin: 0 30px 20px 0;
+	background: transparent url(../img/round-bg.png) no-repeat;
+}
+*/
+
+
+/*******
+ *
+ * NAVIGATION
+ * 
+ *******/
+#wrapper .navigation {
+	position:absolute;
+	bottom:0; left:50%;
+	margin-left:-350px;
+	width:750px; height:120px;
+	z-index:50;
+}
+#wrapper .navigation .blog { 
+	display: block;  
+	height:auto;
+	padding: 6px 0 25px 0;
+	text-align: center;
+	line-height: 0;
+}
+#wrapper .navigation .blog ul {
+	overflow:hidden;
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#wrapper .navigation .blog li {
+	/*border-top: 1px solid transparent;*/
+	float:left;
+	display:block;
+	color:#000;
+	padding:6px 0px 6px 100px;
+	white-space:nowrap;
+	font-size:10px;
+	line-height:11px;
+}
+#wrapper .navigation .blog li.divider {
+	border-left: 1px solid #000;
+	padding:6px 20px 6px 10px;
+}
+#wrapper .navigation .blog li a {
+	color:#000;
+	padding:6px 0;
+	text-decoration:none;
+} 
+#wrapper .navigation .blog li a:hover {
+	/*border-color: #000000;*/
+}
+#wrapper .navigation .fast {
+	text-align: center;
+	font-size: 0px;
+	line-height:0px;
+	padding-bottom: 30px;  
+	border-bottom: 1px solid #000000;
+}
+#wrapper .navigation .fast a {  
+	overflow:hidden;
+	display:inline-block;
+	width:31px;
+	height:31px;
+	text-indent:-9999px;
+	cursor:default;
+	background:url(../img/btn-nav.png) no-repeat;
+}
+#wrapper .navigation .fast a.next {
+	width:40px;
+	background-position: 0px 0;
+} 
+#wrapper .navigation .fast a.prev {
+	background-position: -40px 0;
+} 
+
+#wrapper .navigation .fast a.active { 
+	cursor: pointer;
+}
+/* SPORT // NEXT */
+#swrapper.healthcare .navigation .fast a.prev {
+	background-position: -80px 0;
+} 
+#swrapper.healthcare .navigation .fast a.prev.active:hover {
+	background-position: -80px -40px;
+} 
+/* SPORT // PREV */
+#swrapper.healthcare .navigation .fast a.next {
+	background-position: -120px 0;
+} 
+#swrapper.healthcare .navigation .fast a.next.active:hover {
+	background-position: -120px -40px;
+}
+/* COM // NEXT */
+#swrapper.business .navigation .fast a.prev {
+	background-position: 0 0;
+} 
+#swrapper.business .navigation .fast a.prev.active:hover {
+	background-position: 0 -40px;
+} 
+/* COM // PREV */
+#swrapper.business .navigation .fast a.next {
+	background-position: -40px 0;
+} 
+#swrapper.business .navigation .fast a.next.active:hover {
+	background-position: -40px -40px;
+}
+/*******
+ *
+ * clients
+ * 
+ *******/
+
+
+.clients .inner {
+	/*background:#f00;*/
+}
+
+
+.clients ul.list {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.clients ul.list li {
+	position:relative;
+	display:block;
+	float:left;
+	width:180px;
+	height:220px;
+	margin:0px 10px 10px 0;
+	padding:0;
+	cursor:pointer;
+	text-align:center;
+}
+.clients ul.list li.alpha {
+	margin-left:0;
+}
+.clients ul.list li.omega {
+	margin-right:0;
+}
+.clients ul.list li a img {
+	margin-top:15px;
+}
+.clients ul.list li h5 {
+	clear:both;
+	/*font-family:'Kuro Regular';*/
+	font-family:Arial;
+	font-size:11px;
+	/*letter-spacing:.1em;*/
+}
+.clients ul.list li .detail {
+	display:none;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width:150px;
+	height:190px;
+	padding:15px;
+	cursor:pointer;
+	text-align:left;
+	-moz-opacity:0;
+	opacity:0;
+	background-color:rgba(207, 222, 0, 0.80);
+}
+.no-js .clients ul.list li:hover .detail {/*display:block;*/}
+.lte8 .clients ul.list li .detail {background-color:#CFDE00;}
+#business .clients ul.list li .detail {background-color:rgba(39, 170, 225, 0.8);}
+#business .lte8 .clients ul.list li .detail {background-color:#27AAE1;}
+
+.clients ul.list li .detail * {
+	font-family:Arial;
+	font-size:11px;
+	line-height:15px;
+}
+.clients ul.list li .detail h5 {
+	margin-bottom:15px;
+	color:#EC008C;
+}
+#business .clients ul.list li .detail h5 {
+	color:#231F20;
+}
+.clients ul.list li .detail p {
+	margin-bottom:5px;
+	color:#494949;
+}
+#business .clients ul.list li .detail p {
+	color:#fff;
+}
+
+/*
+.clients img {
+	display:block;
+	float:left;
+	margin:0px 35px 15px 0;
+}
+.clients img.omega {
+	margin-right:0;
+}
+*/
+.clients .wrapper {
+	margin-bottom:20px;
+}
+
+/*
+ .clients .inner h3 {
+ 	font-size: 16px;
+}
+.clients .mosaique {
+	width:600px;  
+	zoom:1;
+}
+.clients .mosaique > div {
+	width:200px; height:180px;
+	position: relative;
+	float: left;  
+}
+.clients .image {  
+	width:200px; height:180px;  
+	cursor: pointer;
+}
+.clients img {         
+	width:160px; height:160px;
+	position: absolute; z-index:2;
+	top: 10px; left:20px;
+}   
+.unactive .clients img.bgportrait {
+	background-color: #FFFFFF;
+}
+#healthcare.active .clients img.bgportrait {
+	background-color: #ccdc29;
+}
+#business.active .clients img.bgportrait {
+	background-color: #0bb7eb;
+}
+.clients .bgportrait {
+	width:200px; height:200px;                     
+	position: absolute; top:-10px; left:0px;
+	z-index: 1;
+}
+.clients .mosaique .txt {
+	line-height: 180px;
+}
+.clients .mosaique .txt .wrapper {
+	vertical-align: middle;
+	line-height: 1.5em; 
+	display:inline-block;
+	padding: 10px;
+	width: auto;
+}
+.clients .txt h4 {
+	font-size: 16px; font-weight: normal;
+	font-style: normal;
+	padding-bottom: 10px;
+	margin-bottom: 6px;
+	background: transparent url(../img/puce-titre.png) no-repeat 0 100%;
+}
+.clients .mosaique .large {
+	width:400px;
+}
+*/
+
+
+
+
+
+
+/*
+======================================================
+	Follow Us
+======================================================
+*/
+
+.follow-us .left {
+	float:left;
+	width:287px;
+}
+.follow-us .right {
+	float: left;
+	width: 300px;
+	margin-left: 20px;
+}
+.follow-us .right .social-button {margin-bottom:20px;}
+.follow-us .right .social-button a {
+	float:left;
+	width:53px;
+	height:53px;
+	margin-left:10px;
+	text-indent:-999em;
+	text-decoration:none;
+	background:url(../img/social-button.png) no-repeat;
+}
+.follow-us .right .social-button a.twitter {margin-left:0px; background-position:0px 0px;}
+.follow-us .right .social-button a.facebook {background-position:-63px 0px;}
+.follow-us .right .social-button a.flickr {background-position:-125px 0px;}
+.follow-us .right .social-button a.youtube {background-position:-189px 0px;}
+
+
+.follow-us .input_submit {float:right; width:100px; height:30px; margin-top: 8px; padding:5px 8px; line-height:20px; background-color:#000;}
+.follow-us .input_submit input[type="submit"] {width:100px; height:30px; font-family:'Rockwell'; font-size:24px; color:#fff; cursor:pointer; border:none; background:none;}
+
+.follow-us .input_bg {float:left; width:231px; margin-right:4px; margin-bottom:4px; padding:1px 3px; border:3px solid #fff; line-height:20px; font-family:'Rockwell'; font-size:14px; color:#EC008C;}
+.follow-us .input_bg span {float:left; width:75px; margin-right:5px;}
+.follow-us .input_bg input {float:left; width:150px; padding:2px; color:#EC008C; border:none; background:none;}
+.follow-us .input_bg input[type="file"] {opacity:0; width:0; height:0;}
+
+
+.follow-us .input_bg.name span {width:45px;}
+.follow-us .input_bg.name input {width:175px;}
+
+.follow-us .input_bg.mail span {width:45px;}
+.follow-us .input_bg.mail input {width:175px;}
+
+.follow-us .input_bg.number span {width:60px;}
+.follow-us .input_bg.number input {width:160px;}
+
+.follow-us .input_bg.file {cursor:pointer; line-height:20px; background-color:#e4ea9a;}
+.follow-us .input_bg.file span {width:auto;}
+.follow-us .input_bg.file input {cursor:pointer;}
+
+/*********************
+ *
+ * FORM
+ * 
+ ********************/  
+#follow-us-form {
+	width: 330px;
+	float: left;
+	padding: 20px 0 0 40px;  
+	position: relative;
+}
+#follow-us-form p {
+	display:table;
+	border-collapse: collapse;
+	border-spacing:0px;
+	width: 330px;
+	margin: 0 0;
+	line-height: 0px;
+	font-size: 0px;
+	border-top:1px solid #FFFFFF;
+	position: relative;
+} 
+#follow-us-form p.message {
+	display: block;
+}
+#follow-us-form p label {   
+	display: table-cell; 
+	border-collapse: collapse;
+	white-space: nowrap;
+	width:20px;
+	height: 24px;
+	padding: 3px 10px;
+	margin:0 auto;
+	font-size: 14px;
+	font-style: italic; 
+	line-height: 18px;
+	vertical-align: middle; 
+	font-weight: normal;
+	cursor: pointer;	
+}  
+#follow-us-form p.message label {
+	display: block;
+	width:100%;
+	margin-top: 3px;
+} 
+#follow-us-form p input {
+	display: table-cell; 
+	border-collapse: collapse;
+	width:100%; 
+	height: 30px;
+	padding: 3px 10px;
+	font-size: 14px;    
+	line-height: 18px;
+	vertical-align: middle;         
+	color: #000000;
+	font-weight: normal;
+	border: 0px none;
+	background-color: transparent;	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;  
+	font-family: Georgia, serif;   
+}   
+#follow-us-form p.error {
+	display: block;
+	text-indent: -9999px;
+	width: 27px; height: 27px;
+	background: transparent url(../img/error.png) no-repeat;
+	position: absolute; top: 2px; left:-35px;
+	border: 0px none;
+	cursor: pointer;
+}      
+#follow-us-form p.retour {
+	display: block;
+	width:auto;
+	line-height: 15px;
+	font-size: 15px;
+	padding: 20px 0;
+	margin-top: 20px;
+	color:#FFFFFF;
+	border:0px none;
+	text-align: right;
+	background: transparent url(../img/puce-titre-blanc.png) no-repeat 100% 0;
+}
+#follow-us-form p input:focus {
+	background-color: #FFFFFF;
+	outline: none;  
+	color: #0087F0;
+}
+#follow-us-form textarea {
+	background-color: transparent; 
+	display:block;
+	width:100%;
+	height: 120px;
+	resize: none;  
+	font-family: Georgia, serif;   
+	padding: 10px;                
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	overflow: auto; 
+} 
+#follow-us-form textarea:focus {
+	background-color: #FFFFFF; 
+	outline: none; 
+	color: #0087F0;
+}
+#submit {
+	display: block;
+	padding-top: 10px;    
+	border-top: 1px solid #FFFFFF;
+	width: 100%;  
+	font-family: Georgia, serif;   
+	font-size: 14px;
+	font-style: italic; 
+	font-weight: bold;
+	color: #FFFFFF;   
+	text-align: right;
+	cursor: pointer; 
+	background-color: transparent;	
+}
+#submit:hover {
+	text-decoration: underline;
+}     
+/*******
+ *
+ * products-and-services SPORT
+ * 
+ *******/
+.expsport .txt .wrapper {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1em;
+}
+.expsport .txt .wrapper p {
+	margin: 3px 0 0 0;
+}    
+
+
+
+
+/*
+#business .about-us img {
+	float: left;	
+}
+#business .about-us .right {
+	float: left;	
+	width:300px;
+	margin: 30px 0 0 35px;
+}
+#business .about-us .right .bloc {
+	margin: 0 0 40px 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+/*********************
+ *
+ * EASY CLEARING
+ * 
+ ********************/          
+.clients .mosaique:after,
+#wrapper .navigation .fast:after,
+.overview:after ,
+.wrapper:after{    
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}  
+/*********************
+ *
+ *IPHONE / IPAD
+ * 
+ ********************/  
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.scrollbar,
+	.track,
+	.thumb {
+		width: 20px;
+	}
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+	.scrollbar,
+	.track,
+	.thumb {
+		width: 30px;
+	}
+}
+
+.hidden {display:none;}
+
+.clearfix:after {content:"."; clear:both; display:block; visibility:hidden; height:0;}
+.clearfix {display:inline-block;}
+* html .clearfix {height:1%; display:inline-block;} /* Hides From IE-MAC \*/
+.clearfix {display:block;} /* Endhide From IE-MAC \*/
+.ie6 .clearfix {height:1%;}
+.lte9 .clearfix {zoom:1;}
+
+.clr {clear:both; display:block; font-size:0; line-height:0;}
